@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sembang With Iman — practical financial clarity for Malaysian women, families, creators and freelancers." />
+  <meta name="theme-color" content="#f8e8e6" />
+  <title>Sembang With Iman | Money, but senang faham.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#241c1d;
+      --muted:#76696a;
+      --cream:#fffaf6;
+      --paper:#fffdfb;
+      --blush:#f8e8e6;
+      --rose:#e58f95;
+      --rose-deep:#b95f69;
+      --rose-soft:#f4cfd1;
+      --sage:#d9e2d4;
+      --plum:#5d3f45;
+      --line:rgba(50,32,35,.12);
+      --shadow:0 24px 80px rgba(100,58,65,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .nav-wrap{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(50,32,35,.06)}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.02em}
+    .brand-mark{width:40px;height:40px;border-radius:14px;background:var(--ink);color:white;display:grid;place-items:center;font-family:'DM Serif Display',serif;font-size:20px}
+    .brand span small{display:block;font-weight:500;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:-2px}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:#52484a}
+    .nav-links a:hover{color:var(--rose-deep)}
+    .btn{border:0;border-radius:999px;padding:14px 21px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;cursor:pointer;transition:.2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-dark{background:var(--ink);color:white;box-shadow:0 8px 24px rgba(36,28,29,.16)}
+    .btn-light{background:white;border:1px solid var(--line)}
+    .btn-rose{background:var(--rose-deep);color:white}
+    .hero{padding:76px 0 64px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--rose-soft),transparent 67%);right:-180px;top:-180px;opacity:.7;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:62px;align-items:center;position:relative}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.66);font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:22px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--rose-deep)}
+    h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-.035em;margin:0}
+    h1{font-size:clamp(54px,7.2vw,92px);line-height:.92;max-width:780px}
+    h1 em{color:var(--rose-deep);font-weight:400}
+    .hero-copy p{font-size:19px;color:var(--muted);max-width:650px;margin:26px 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .micro{margin-top:18px;color:#8b7c7e;font-size:12px}
+    .hero-card{position:relative;background:rgba(255,255,255,.76);border:1px solid rgba(81,51,57,.1);border-radius:34px;padding:28px;box-shadow:var(--shadow);transform:rotate(1deg)}
+    .hero-card:after{content:"";position:absolute;inset:12px;border:1px solid rgba(81,51,57,.08);border-radius:26px;pointer-events:none}
+    .score-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px;position:relative;z-index:1}
+    .score-head small{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:var(--muted);font-weight:700}
+    .score-head h3{font-size:34px;margin-top:5px}
+    .score-pill{background:var(--sage);padding:8px 12px;border-radius:999px;font-size:11px;font-weight:700}
+    .score-ring{width:200px;height:200px;border-radius:50%;margin:18px auto;background:conic-gradient(var(--rose-deep) 0 62%,#f1e9e6 62% 100%);display:grid;place-items:center;position:relative}
+    .score-ring:before{content:"";width:158px;height:158px;background:white;border-radius:50%;position:absolute}
+    .score-ring strong{position:relative;font-family:'DM Serif Display',serif;font-size:52px;line-height:1}
+    .score-ring strong span{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--muted)}
+    .mini-bars{display:grid;gap:12px;position:relative;z-index:1}
+    .mini-row{display:grid;grid-template-columns:100px 1fr 34px;gap:10px;align-items:center;font-size:12px}
+    .bar{height:7px;border-radius:99px;background:#eee6e3;overflow:hidden}.bar i{height:100%;display:block;background:var(--rose-deep);border-radius:inherit}
+    .proof{padding:18px 0 72px}
+    .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:rgba(255,255,255,.7);border-radius:22px;overflow:hidden}
+    .proof-item{padding:24px;border-right:1px solid var(--line)}.proof-item:last-child{border-right:0}
+    .proof-item strong{display:block;font-size:14px}.proof-item span{font-size:12px;color:var(--muted)}
+    section{padding:94px 0}
+    .section-kicker{text-transform:uppercase;font-size:11px;letter-spacing:.15em;font-weight:700;color:var(--rose-deep);margin-bottom:12px}
+    .section-title{font-size:clamp(42px,5vw,66px);line-height:1.02;max-width:850px}
+    .section-lead{font-size:18px;color:var(--muted);max-width:720px;margin:18px 0 0}
+    .problems{background:var(--paper);border-top:1px solid rgba(50,32,35,.06);border-bottom:1px solid rgba(50,32,35,.06)}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+    .problem{padding:28px;border:1px solid var(--line);border-radius:22px;background:white;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
+    .problem .num{font-size:11px;color:var(--rose-deep);font-weight:700;letter-spacing:.12em}
+    .problem h3{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.35;margin-top:26px}
+    .quiz-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+    .quiz-copy{position:sticky;top:120px}
+    .quiz-card{background:white;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:30px}
+    .quiz-progress{height:7px;background:#f2e7e4;border-radius:99px;overflow:hidden;margin-bottom:28px}.quiz-progress span{display:block;height:100%;width:16.6%;background:var(--rose-deep);transition:.3s}
+    .quiz-q small{display:block;font-weight:700;color:var(--rose-deep);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+    .quiz-q h3{font-size:34px;line-height:1.1;margin-bottom:20px}
+    .answers{display:grid;gap:10px}
+    .answer{width:100%;text-align:left;border:1px solid var(--line);background:#fffdfa;padding:15px 16px;border-radius:14px;cursor:pointer;transition:.18s;color:var(--ink)}
+    .answer:hover{border-color:var(--rose-deep);background:#fff7f6;transform:translateX(3px)}
+    .quiz-result{text-align:center;padding:10px 0 5px}.result-score{font-family:'DM Serif Display',serif;font-size:80px;line-height:1;color:var(--rose-deep)}
+    .quiz-result h3{font-size:34px;margin:8px 0 10px}.quiz-result p{color:var(--muted);margin:0 auto 22px;max-width:460px}
+    .products{background:var(--ink);color:white;overflow:hidden;position:relative}
+    .products:before{content:"";position:absolute;inset:auto auto -180px -120px;width:420px;height:420px;border-radius:50%;background:rgba(229,143,149,.12)}
+    .products .section-kicker{color:#f6b8bc}.products .section-lead{color:#bfaeb0}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px;position:relative}
+    .product{background:#342729;border:1px solid rgba(255,255,255,.09);border-radius:26px;padding:27px;min-height:420px;display:flex;flex-direction:column}
+    .product.featured{background:var(--blush);color:var(--ink);transform:translateY(-10px)}
+    .tag{align-self:flex-start;padding:7px 10px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.08)}
+    .featured .tag{background:white;color:var(--rose-deep)}
+    .product h3{font-size:36px;line-height:1.02;margin:22px 0 8px}
+    .product p{color:#c6b7b9;font-size:14px}.featured p{color:var(--muted)}
+    .price{font-family:'DM Serif Display',serif;font-size:48px;margin:20px 0 12px}.price small{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#ad9a9d}
+    .product ul{padding:0;margin:0 0 26px;list-style:none;display:grid;gap:10px;font-size:13px}.product li:before{content:"✓";margin-right:8px;color:#f2a5aa}.featured li:before{color:var(--rose-deep)}
+    .product .btn{margin-top:auto;width:100%}
+    .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:42px}
+    .service{border:1px solid var(--line);border-radius:26px;padding:30px;background:white;position:relative;overflow:hidden}
+    .service .service-no{font-size:11px;letter-spacing:.13em;color:var(--rose-deep);font-weight:700;text-transform:uppercase}
+    .service h3{font-size:42px;margin:12px 0 10px}.service p{color:var(--muted);max-width:560px}
+    .service-price{display:flex;align-items:baseline;gap:8px;margin:26px 0 20px}.service-price strong{font-family:'DM Serif Display',serif;font-size:44px}.service-price span{font-size:12px;color:var(--muted)}
+    .service-points{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.service-points span{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:8px 10px;background:#fffaf8}
+    .creator{background:#f4eee6}
+    .creator-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+    .creator-board{background:white;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow);transform:rotate(-1deg)}
+    .ledger{display:grid;grid-template-columns:1.2fr .8fr .7fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:12px}.ledger div{padding:12px;border-bottom:1px solid var(--line)}.ledger div:nth-child(3n+1),.ledger div:nth-child(3n+2){border-right:1px solid var(--line)}.ledger .head{background:#fff6f3;font-weight:700}.ledger .good{color:#43745c;font-weight:700}
+    .creator-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}.creator-list span{font-size:13px;padding:12px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(80,50,55,.08)}
+    .funnel{padding-top:80px}
+    .funnel-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:38px}.flow-step{padding:22px 16px;border:1px solid var(--line);border-radius:18px;background:white;position:relative}.flow-step:not(:last-child):after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);width:20px;height:20px;background:var(--cream);display:grid;place-items:center;color:var(--rose-deep);font-weight:700}.flow-step small{display:block;color:var(--rose-deep);font-weight:700;font-size:10px;letter-spacing:.12em}.flow-step strong{display:block;margin-top:8px;font-size:15px}.flow-step span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+    .guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}.guide{border-top:1px solid var(--ink);padding-top:16px;min-height:150px}.guide small{color:var(--rose-deep);font-weight:700}.guide h3{font-family:'DM Sans',sans-serif;font-size:18px;line-height:1.35;font-weight:600;letter-spacing:-.02em;margin:13px 0}.guide a{font-size:12px;font-weight:700}
+    .talks{background:var(--blush)}
+    .talks-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}.talk-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.talk-tags span{padding:11px 13px;background:rgba(255,255,255,.65);border:1px solid rgba(70,40,45,.1);border-radius:999px;font-size:12px}.talk-card{background:var(--ink);color:white;padding:32px;border-radius:28px}.talk-card h3{font-size:42px;line-height:1.05}.talk-card p{color:#c8b8ba}.talk-card .btn{margin-top:18px}
+    .about-grid{display:grid;grid-template-columns:.74fr 1.26fr;gap:60px;align-items:start}.portrait{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(145deg,#f0c7ca,#f8ebe7 54%,#e0d9cd);padding:24px;display:flex;align-items:flex-end;overflow:hidden;position:relative}.portrait:before{content:"IMAN";position:absolute;font-family:'DM Serif Display',serif;font-size:100px;top:10px;left:-10px;color:rgba(255,255,255,.45)}.portrait-card{position:relative;background:rgba(255,255,255,.8);backdrop-filter:blur(10px);padding:18px;border-radius:18px;width:100%}.portrait-card strong{display:block;font-family:'DM Serif Display',serif;font-size:28px}.portrait-card span{font-size:12px;color:var(--muted)}
+    .credentials{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}.cred{padding:14px;border:1px solid var(--line);border-radius:14px;background:white;font-size:12px}.about-copy p{font-size:17px;color:var(--muted)}
+    .final-cta{padding:88px 0}.cta-box{background:var(--ink);color:white;border-radius:34px;padding:58px;display:flex;justify-content:space-between;gap:40px;align-items:center;overflow:hidden;position:relative}.cta-box:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:70px solid rgba(229,143,149,.08);right:-100px;top:-120px}.cta-box h2{font-size:clamp(40px,5vw,64px);max-width:700px;position:relative;z-index:1}.cta-box p{color:#c7b8ba;max-width:580px;position:relative;z-index:1}.cta-box .actions{position:relative;z-index:1;min-width:265px;justify-content:flex-end}
+    footer{padding:28px 0 44px;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}.footer-row small{color:var(--muted)}.socials{display:flex;gap:16px;font-size:12px;font-weight:700}
+    .mobile-menu{display:none}
+    .preview-note{position:fixed;right:16px;bottom:16px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 40px rgba(40,28,30,.14);padding:11px 14px;border-radius:14px;font-size:11px;color:var(--muted);z-index:70}.preview-note strong{color:var(--ink)}
+    @media(max-width:920px){
+      .nav-links{display:none}.mobile-menu{display:inline-flex}.hero-grid,.quiz-wrap,.creator-grid,.talks-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:50px}.hero-card{max-width:620px;margin:auto}.proof-grid{grid-template-columns:1fr 1fr}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.problem-grid,.product-grid,.guides-grid{grid-template-columns:1fr 1fr}.product-grid .product:last-child{grid-column:1/-1}.services-grid{grid-template-columns:1fr}.quiz-copy{position:static}.funnel-flow{grid-template-columns:1fr 1fr}.flow-step:not(:last-child):after{display:none}.cta-box{flex-direction:column;align-items:flex-start}.cta-box .actions{justify-content:flex-start}
+    }
+    @media(max-width:640px){
+      .container{width:min(100% - 26px,1180px)}nav{height:68px}.brand span{font-size:13px}.brand-mark{width:36px;height:36px}.hero{padding:44px 0 48px}h1{font-size:52px}.hero-copy p{font-size:16px}.actions .btn{width:100%}.proof{padding-bottom:50px}.proof-grid{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid var(--line)!important}.proof-item:last-child{border-bottom:0!important}section{padding:68px 0}.section-title{font-size:42px}.section-lead{font-size:16px}.problem-grid,.product-grid,.guides-grid{grid-template-columns:1fr}.product-grid .product:last-child{grid-column:auto}.product.featured{transform:none}.hero-card{padding:20px}.score-ring{width:170px;height:170px}.score-ring:before{width:132px;height:132px}.score-ring strong{font-size:44px}.mini-row{grid-template-columns:80px 1fr 28px}.quiz-card{padding:22px}.quiz-q h3{font-size:28px}.services-grid{gap:14px}.service{padding:24px}.service h3{font-size:34px}.creator-list{grid-template-columns:1fr}.funnel-flow{grid-template-columns:1fr}.talk-card h3{font-size:36px}.credentials{grid-template-columns:1fr}.cta-box{padding:34px 24px;border-radius:26px}.footer-row{flex-direction:column;align-items:flex-start}.preview-note{left:10px;right:10px;text-align:center}.product{min-height:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container">
+      <a class="brand" href="#top" aria-label="Sembang With Iman home">
+        <span class="brand-mark">SI</span>
+        <span>Sembang With Iman <small>Personal Finance, simplified</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#start">Start Here</a><a href="#shop">Digital Shop</a><a href="#services">Services</a><a href="#creators">Creators</a><a href="#talks">Talks</a>
+      </div>
+      <a class="btn btn-dark" href="#money-check">Check My Money</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> CFP® · IFP · Licensed Financial Planner</div>
+          <h1>Money, but <em>senang faham.</em></h1>
+          <p>You tak perlukan another random finance tip. You perlukan clarity tentang duit you sendiri, apa yang okay, apa yang perlu fix, dan apa next step yang masuk akal.</p>
+          <div class="actions">
+            <a href="#money-check" class="btn btn-dark">Check My Money — Free</a>
+            <a href="https://financial.imanabdulrahim.com/fhc/" target="_blank" rel="noopener" class="btn btn-light">Book Financial Health Check</a>
+          </div>
+          <div class="micro">For Malaysian women, families, freelancers & creators · Educational content is not personalised financial advice.</div>
+        </div>
+        <div class="hero-card" aria-label="Example money clarity score">
+          <div class="score-head"><div><small>Your Money Clarity</small><h3>Financial snapshot</h3></div><span class="score-pill">2-min check</span></div>
+          <div class="score-ring"><strong>62<span>/100</span></strong></div>
+          <div class="mini-bars">
+            <div class="mini-row"><span>Cashflow</span><div class="bar"><i style="width:78%"></i></div><b>78</b></div>
+            <div class="mini-row"><span>Safety Net</span><div class="bar"><i style="width:44%"></i></div><b>44</b></div>
+            <div class="mini-row"><span>Protection</span><div class="bar"><i style="width:53%"></i></div><b>53</b></div>
+            <div class="mini-row"><span>Goals</span><div class="bar"><i style="width:71%"></i></div><b>71</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof">
+      <div class="container proof-grid">
+        <div class="proof-item"><strong>Clarity first</strong><span>No jargon. Start with your real situation.</span></div>
+        <div class="proof-item"><strong>Malaysia-focused</strong><span>EPF, tax, SSPN, ASB, takaful & more.</span></div>
+        <div class="proof-item"><strong>Creator-friendly</strong><span>Built for variable income and side hustles too.</span></div>
+        <div class="proof-item"><strong>Professional pathway</strong><span>From education to licensed financial planning.</span></div>
+      </div>
+    </div>
+
+    <section class="problems" id="start">
+      <div class="container">
+        <div class="section-kicker">Start where you are</div>
+        <h2 class="section-title">Which one sounds most like you sekarang?</h2>
+        <p class="section-lead">Tak perlu faham semua benda sekaligus. Start dengan masalah yang paling dekat dengan hidup you sekarang.</p>
+        <div class="problem-grid">
+          <div class="problem"><span class="num">01 · CASHFLOW</span><h3>“Gaji okay, tapi duit macam hilang setiap bulan.”</h3></div>
+          <div class="problem"><span class="num">02 · CLARITY</span><h3>“I nak tahu sebenarnya kewangan I okay ke tak.”</h3></div>
+          <div class="problem"><span class="num">03 · GOALS</span><h3>“Banyak goals. Rumah, anak, retirement. Nak prioritize yang mana?”</h3></div>
+          <div class="problem"><span class="num">04 · FAMILY</span><h3>“Nak mula simpan untuk anak, tapi SSPN, ASB, TH semua nampak sama.”</h3></div>
+          <div class="problem"><span class="num">05 · CREATOR</span><h3>“Income freelance tak tetap. Tax pun pening. Berapa kena simpan?”</h3></div>
+          <div class="problem"><span class="num">06 · PROTECTION</span><h3>“Ada insurance/takaful, tapi I sendiri tak tahu cukup ke tak.”</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="money-check">
+      <div class="container quiz-wrap">
+        <div class="quiz-copy">
+          <div class="section-kicker">Free Money Check</div>
+          <h2 class="section-title">2 minit untuk nampak big picture.</h2>
+          <p class="section-lead">Answer six simple questions. You’ll get a quick Money Clarity Score and a suggested next step.</p>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-progress"><span id="progressBar"></span></div>
+          <div id="quizContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="shop">
+      <div class="container">
+        <div class="section-kicker">Digital Shop</div>
+        <h2 class="section-title">Start kecil. Build a money system you’ll actually use.</h2>
+        <p class="section-lead">Low-cost tools for followers who want to take action before they’re ready for a consultation.</p>
+        <div class="product-grid">
+          <article class="product featured">
+            <span class="tag">Best first step</span>
+            <h3>Money Clarity Kit</h3>
+            <p>A simple personal finance operating system for everyday Malaysians.</p>
+            <div class="price">RM39 <small>one-time</small></div>
+            <ul><li>Monthly cashflow dashboard</li><li>Sinking fund planner</li><li>Emergency fund calculator</li><li>Debt + protection snapshot</li><li>Money calendar & annual checklist</li></ul>
+            <button class="btn btn-dark" onclick="showPreview('Money Clarity Kit')">Preview the Kit</button>
+          </article>
+          <article class="product">
+            <span class="tag">For side hustlers</span>
+            <h3>Creator Money System</h3>
+            <p>For freelancers, creators and affiliates with variable income.</p>
+            <div class="price">RM79 <small>one-time</small></div>
+            <ul><li>Variable income planner</li><li>Brand & client income tracker</li><li>Tax reserve calculator</li><li>Expense + receipt organiser</li><li>EPF, zakat & yearly tax prep</li></ul>
+            <button class="btn btn-light" onclick="showPreview('Creator Money System')">See What’s Inside</button>
+          </article>
+          <article class="product">
+            <span class="tag">Bundle</span>
+            <h3>Complete Money Bundle</h3>
+            <p>Both systems, one organised workflow, plus bonus family worksheets.</p>
+            <div class="price">RM99 <small>launch bundle</small></div>
+            <ul><li>Money Clarity Kit</li><li>Creator Money System</li><li>Anak savings planner</li><li>Money Date worksheet</li><li>Future update access</li></ul>
+            <button class="btn btn-light" onclick="showPreview('Complete Money Bundle')">View Bundle</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-kicker">Professional services</div>
+        <h2 class="section-title">When worksheets aren’t enough, go deeper.</h2>
+        <p class="section-lead">A clear bridge from self-guided tools into personalised financial planning.</p>
+        <div class="services-grid">
+          <article class="service">
+            <span class="service-no">Service 01</span>
+            <h3>Financial Health Check</h3>
+            <p>A structured review to understand your current financial position, identify gaps and know what needs attention first.</p>
+            <div class="service-price"><strong>RM350</strong><span>+ applicable SST</span></div>
+            <div class="service-points"><span>2 sessions</span><span>Financial health report</span><span>Clear action priorities</span></div>
+            <a class="btn btn-dark" href="https://financial.imanabdulrahim.com/fhc/" target="_blank" rel="noopener">Explore Health Check</a>
+          </article>
+          <article class="service">
+            <span class="service-no">Service 02</span>
+            <h3>Full Financial Planning</h3>
+            <p>A deeper 12-month planning journey across cashflow, investments, protection, estate, goals and tax planning.</p>
+            <div class="service-price"><strong>RM3,500+</strong><span>planning engagement</span></div>
+            <div class="service-points"><span>6 financial pillars</span><span>Implementation support</span><span>Regular reviews</span></div>
+            <a class="btn btn-dark" href="https://financial.imanabdulrahim.com/planning/" target="_blank" rel="noopener">Book Discovery Session</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="creator" id="creators">
+      <div class="container creator-grid">
+        <div>
+          <div class="section-kicker">Creators & freelancers</div>
+          <h2 class="section-title">Income tak tetap tak semestinya money system pun tak tetap.</h2>
+          <p class="section-lead">A dedicated funnel for people earning through freelancing, affiliate sales, brand deals, content and side hustles.</p>
+          <div class="creator-list"><span>✓ Tax reserve system</span><span>✓ Income smoothing</span><span>✓ Business expense log</span><span>✓ EPF self-contribution</span><span>✓ Zakat preparation</span><span>✓ Annual tax checklist</span></div>
+          <a href="#shop" class="btn btn-dark">See Creator Money System</a>
+        </div>
+        <div class="creator-board">
+          <div class="score-head"><div><small>Creator dashboard</small><h3>September cashflow</h3></div><span class="score-pill">Example</span></div>
+          <div class="ledger">
+            <div class="head">Income</div><div class="head">Amount</div><div class="head">Tax reserve</div>
+            <div>Brand campaign</div><div>RM4,800</div><div class="good">RM720</div>
+            <div>Affiliate</div><div>RM1,930</div><div class="good">RM290</div>
+            <div>Freelance</div><div>RM2,200</div><div class="good">RM330</div>
+            <div>Other</div><div>RM650</div><div class="good">RM98</div>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin:18px 2px 0">One glance: what came in, what to reserve, what can actually be spent.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="funnel">
+      <div class="container">
+        <div class="section-kicker">The ecosystem</div>
+        <h2 class="section-title">One audience. One clear journey.</h2>
+        <p class="section-lead">Instead of sending followers into disconnected links, every piece of content has a logical next step.</p>
+        <div class="funnel-flow">
+          <div class="flow-step"><small>01</small><strong>Threads / IG</strong><span>Useful everyday content</span></div>
+          <div class="flow-step"><small>02</small><strong>Free Money Check</strong><span>Capture intent + email</span></div>
+          <div class="flow-step"><small>03</small><strong>RM39 Kit</strong><span>Low-friction first purchase</span></div>
+          <div class="flow-step"><small>04</small><strong>RM350 Health Check</strong><span>Professional review</span></div>
+          <div class="flow-step"><small>05</small><strong>Full Planning</strong><span>12-month engagement</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-kicker">Learn with Iman</div>
+        <h2 class="section-title">Turn social posts into searchable money guides.</h2>
+        <p class="section-lead">Evergreen articles help the same good content keep working after it disappears from the feed.</p>
+        <div class="guides-grid">
+          <article class="guide"><small>Family money</small><h3>SSPN vs ASB vs Tabung Haji: simpanan anak patut start dekat mana?</h3><a href="#">Read guide →</a></article>
+          <article class="guide"><small>Freelancer tax</small><h3>Income freelance tak tetap: berapa patut asingkan untuk tax?</h3><a href="#">Read guide →</a></article>
+          <article class="guide"><small>Cashflow</small><h3>Sinking fund: the boring account that saves you from financial panic.</h3><a href="#">Read guide →</a></article>
+          <article class="guide"><small>EPF</small><h3>Suri rumah boleh carum KWSP? A simple starting guide.</h3><a href="#">Read guide →</a></article>
+          <article class="guide"><small>Protection</small><h3>“I dah ada insurance.” Okay, tapi you tahu apa yang actually covered?</h3><a href="#">Read guide →</a></article>
+          <article class="guide"><small>Financial planning</small><h3>Budgeting vs financial planning: what changes when your life gets more complex?</h3><a href="#">Read guide →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="talks" id="talks">
+      <div class="container talks-grid">
+        <div>
+          <div class="section-kicker">Talks · Workshops · Collabs</div>
+          <h2 class="section-title">Finance content that people actually want to listen to.</h2>
+          <p class="section-lead">For companies, communities, media, podcasts and brand campaigns.</p>
+          <div class="talk-tags"><span>Financial Wellness</span><span>Money for Women</span><span>Family Finance</span><span>Creator & Freelancer Finance</span><span>Tax Awareness</span><span>Cashflow & Budgeting</span><span>Financial Literacy</span></div>
+        </div>
+        <div class="talk-card">
+          <div class="section-kicker">Bring Iman in</div>
+          <h3>Make the complicated stuff feel human.</h3>
+          <p>Corporate talks, panel sessions, workshops, podcasts, media appearances and selected brand collaborations.</p>
+          <a href="https://imanabdulrahim.com/contact/" target="_blank" rel="noopener" class="btn btn-rose">Enquire for a Collaboration</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="portrait"><div class="portrait-card"><strong>Iman Abdul Rahim</strong><span>Licensed Financial Planner · Creator · Speaker</span></div></div>
+        <div class="about-copy">
+          <div class="section-kicker">About Iman</div>
+          <h2 class="section-title">Professional finance, minus the intimidating language.</h2>
+          <p>Sembang With Iman bridges the gap between everyday money questions and professional financial planning. The goal is simple: help people understand their money well enough to make better decisions with confidence.</p>
+          <p>Iman’s financial content covers cashflow, family savings, tax, investments, protection and financial planning, while her creator background makes the conversation relatable to Malaysians earning in very different ways.</p>
+          <div class="credentials"><div class="cred"><strong>CFP®</strong><br>Certified Financial Planner</div><div class="cred"><strong>IFP</strong><br>Islamic Financial Planner</div><div class="cred"><strong>Professional planning</strong><br>Financial health & 12-month planning</div><div class="cred"><strong>Public education</strong><br>Talks, workshops & creator finance</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container cta-box">
+        <div><h2>Tak perlu fix everything today. Just know your next step.</h2><p>Start with the free Money Check. If you need deeper clarity, move into the kit or a professional Financial Health Check.</p></div>
+        <div class="actions"><a href="#money-check" class="btn btn-rose">Start Free Money Check</a><a href="https://financial.imanabdulrahim.com/fhc/" target="_blank" rel="noopener" class="btn btn-light">Book Health Check</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="brand"><span class="brand-mark">SI</span><span>Sembang With Iman <small>Money, but senang faham.</small></span></div>
+      <div><div class="socials"><a href="https://www.instagram.com/sembangwithiman/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@imanabdulrahim" target="_blank" rel="noopener">Threads</a><a href="https://imanabdulrahim.com/" target="_blank" rel="noopener">Website</a></div><small>Concept funnel preview · 2026</small></div>
+    </div>
+  </footer>
+
+  <div class="preview-note"><strong>Concept Preview</strong> · Digital products and checkout flows shown here are proposed, not live offers.</div>
+
+  <script>
+    const questions = [
+      {q:'Bila gaji / income masuk, you tahu exactly berapa yang tinggal lepas commitments?', a:[['Yes, very clear',16],['Lebih kurang je',10],['Honestly, tak tahu',4]]},
+      {q:'Kalau income stop hari ni, emergency fund boleh cover berapa lama?', a:[['6 months atau lebih',18],['3–5 months',13],['1–2 months',7],['Belum ada emergency fund',2]]},
+      {q:'You tahu berapa total hutang dan monthly commitments you sekarang?', a:[['Yes, semua tracked',16],['Roughly tahu',10],['Tak pernah calculate properly',4]]},
+      {q:'Bila last you review insurance / takaful coverage?', a:[['Dalam 12 bulan ni',16],['1–3 tahun lepas',10],['Tak ingat / tak pernah',4]]},
+      {q:'Financial goals you ada amount + target date yang clear?', a:[['Yes, documented',18],['Ada goals, tapi tak detail',11],['Belum lagi',4]]},
+      {q:'Tax, EPF, zakat dan yearly money admin you rasa macam mana?', a:[['Organised, ada system',16],['Kadang-kadang kelam-kabut',9],['Memang last minute / confuse',3]]}
+    ];
+    let qIndex=0, score=0;
+    const content=document.getElementById('quizContent');
+    const progress=document.getElementById('progressBar');
+    function renderQuestion(){
+      const item=questions[qIndex];
+      progress.style.width=((qIndex+1)/questions.length*100)+'%';
+      content.innerHTML=`<div class="quiz-q"><small>Question ${qIndex+1} of ${questions.length}</small><h3>${item.q}</h3><div class="answers">${item.a.map((x,i)=>`<button class="answer" onclick="choose(${x[1]})">${x[0]}</button>`).join('')}</div></div>`;
+    }
+    function choose(points){score+=points;qIndex++; if(qIndex<questions.length){renderQuestion()}else{renderResult()}}
+    function renderResult(){
+      progress.style.width='100%';
+      const normalized=Math.min(100,Math.round(score/100*100));
+      let title='You dah ada strong foundation.'; let copy='Next step: refine your goals and make sure your protection, investment and long-term plan all work together.';
+      if(normalized<45){title='Start with the basics, one by one.';copy='Your biggest win sekarang is visibility. Start by organising cashflow, emergency savings and your current commitments before adding more complexity.'}
+      else if(normalized<70){title='Good start. Ada a few blind spots.';copy='You have some systems already, but there are likely gaps in protection, goals or annual money admin. This is where a structured Money Clarity Kit can help.'}
+      content.innerHTML=`<div class="quiz-result"><small class="section-kicker">Your Money Clarity Score</small><div class="result-score">${normalized}</div><h3>${title}</h3><p>${copy}</p><div class="actions" style="justify-content:center"><a href="#shop" class="btn btn-dark">See Money Clarity Kit · RM39</a><a href="https://financial.imanabdulrahim.com/fhc/" target="_blank" rel="noopener" class="btn btn-light">Book Professional Health Check</a></div><button onclick="resetQuiz()" style="margin-top:18px;border:0;background:none;color:#8b7c7e;cursor:pointer;font-size:12px;text-decoration:underline">Retake check</button></div>`;
+    }
+    function resetQuiz(){qIndex=0;score=0;renderQuestion();}
+    function showPreview(name){alert(name+' is a proposed digital product in this concept preview. The production version can connect to ToyyibPay / Billplz and automatically deliver the files after payment.');}
+    renderQuestion();
+  </script>
+</body>
+</html>
